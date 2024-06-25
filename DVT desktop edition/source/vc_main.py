@@ -1923,8 +1923,10 @@ class query_window(QMainWindow):
         yellow = (0, 255, 255)
         color=[red,green,yellow]
         font = cv2.FONT_HERSHEY_SIMPLEX
-        x = int(event.pos().x()*1.6)
-        y = int(event.pos().y()*1.6)
+        # x = int(event.pos().x()*1.6) # 1.6 for 1024*768 1024/640=1.6 768/480=1.6
+        # y = int(event.pos().y()*1.6)
+        x = int(event.pos().x()*3) # 3/2.25 for 1920*1080 1920/640=3 1080/480=2.25
+        y = int(event.pos().y()*2.25)
         # print(x,y)
         if len(xylist)<3:
             xylist.append((x,y))
