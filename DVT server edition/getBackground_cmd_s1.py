@@ -18,7 +18,7 @@ startframe=300
 
 codec = 'mp4v'
 
-input_vidpath = fileplace + videoname
+input_vidpath = fileplace + '/' + videoname
 modified_vidpath =fileplace+videoname.replace('.','_')+'_cleaned.mp4'
 cap = cv2.VideoCapture(input_vidpath)
 total_frame=int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
