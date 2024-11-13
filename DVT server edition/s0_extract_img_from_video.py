@@ -6,10 +6,10 @@ import os
 
 fileplace=sys.argv[1]
 video_place=fileplace
+videolist=[]
 for root, dirs, files in os.walk(fileplace):
-    videolist=files
-newvideolist=[
-]
+    videolist.extend(files)
+newvideolist=[]
 for file in videolist:
     if not ('.jpg' in file):
         if not ('.csv' in file):
