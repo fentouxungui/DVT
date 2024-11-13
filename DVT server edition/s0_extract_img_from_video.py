@@ -18,12 +18,12 @@ for file in videolist:
 videolist=newvideolist
 
 N=1
-N_file=fileplace+'N_img/'
+N_file=fileplace+'/N_img/'
 if not os.path.exists(N_file):
     os.makedirs(N_file)
 for v in videolist:
     videoname=v
-    cap = cv2.VideoCapture(video_place+videoname)
+    cap = cv2.VideoCapture(video_place+'/'+videoname)
     cap.set(cv2.CAP_PROP_POS_FRAMES, float(100))
     rval, frame = cap.read()
     # img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
